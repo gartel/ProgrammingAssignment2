@@ -6,16 +6,16 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
-    #function 'set' stores a new value for 'x' 
+    ## function 'set' stores a new value for 'x' 
     set <- function(y) {
         x <<- y
         inv <<- NULL #and resets 'inv'
     }
-    # function 'get' returns 'x'
+    ## function 'get' returns 'x'
     get <- function() x
-    # function 'setinv' stores 'inv'
+    ## function 'setinv' stores 'inv'
     setinv <- function(inverse) inv <<- inverse
-    # function 'getinv' returns 'inv'
+    ## function 'getinv' returns 'inv'
     getinv <- function() inv
     list(set = set, get = get,
          setinv = setinv,
